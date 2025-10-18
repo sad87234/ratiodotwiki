@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>R A T I O</title>
+    <script src="js/antiinspect.js" defer=""></script>
+    <link href="https://fonts.cdnfonts.com/css/vcr-osd-mono" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="bg">
+      <video autoplay="" muted="" loop="">
+        <source src="media/bg.mp4" type="video/mp4" />
+      </video>
+
+      <header>
+        <a
+          href="https://t.me/ratioanc"
+          target="_blank"
+          style="text-decoration: none; color: inherit"
+        >
+          <h1>ratio.wiki</h1>
+        </a>
+      </header>
+
+      <div class="members">
+        <div class="member">
+          <img src="images/g.png" alt="guardian" />
+          <h3>guardian</h3>
+          <p>member</p>
+        </div>
+        <div class="member">
+          <img src="images/a.png" alt="akane" />
+          <h3>akane</h3>
+          <p>member</p>
+        </div>
+        <div class="member">
+          <img src="images/e.jpg" alt="empathy" />
+          <h3>empathy</h3>
+          <p>owner</p>
+        </div>
+        <div class="member">
+          <img src="images/p.png" alt="paranoid" />
+          <h3>paranoid</h3>
+          <p>owner</p>
+        </div>
+        <div class="member">
+          <img src="images/l.png" alt="lace" />
+          <h3>lace</h3>
+          <p>member</p>
+        </div>
+      </div>
+
+      <div id="overlay" onclick="proceed()">
+        <div id="enter">click to enter</div>
+      </div>
+
+      <audio id="music" loop="">
+        <source src="media/well.mp3" type="audio/mp3" />
+      </audio>
+    </div>
+
+    <script>
+      function proceed() {
+        const overlay = document.getElementById("overlay");
+        overlay.style.opacity = "0";
+        setTimeout(() => {
+          overlay.style.display = "none";
+        }, 500);
+
+        const audio = document.getElementById("music");
+        audio.play().catch((err) => console.warn("Autoplay blocked:", err));
+      }
+    </script>
+  </body>
+</html>
